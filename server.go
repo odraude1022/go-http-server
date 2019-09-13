@@ -38,15 +38,3 @@ func (p *PlayerServer) processWin(w http.ResponseWriter, player string) {
 	p.store.RecordWin(player)
 	w.WriteHeader(http.StatusAccepted)
 }
-
-func GetPlayerScore(name string) string {
-	if name == "Pepper" {
-		return "20"
-	}
-
-	if name == "Floyd" {
-		return "10"
-	}
-
-	return ""
-}
